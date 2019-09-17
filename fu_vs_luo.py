@@ -11,11 +11,11 @@ def relu(arg):
 
 xprint = fun
 
-class Delisha(object):
-    """docstring for Delisha"""
-    name = "德莉傻"
+class Fuhua(object):
+    """docstring for Fuhua"""
+    name = "浮华"
     _hp = 100
-    _atk = 24
+    _atk = 27
     _defe = 8
     _counter = 0
     win = False
@@ -23,13 +23,12 @@ class Delisha(object):
 
     def attack(self, enemy):
         self._counter += 1
-        if self._counter == 2:
+        if self._counter == 3:
             self._counter = 0
-            xprint('德莉傻发动了必杀技')
-            for i in range(4):
-                enemy.defence(self, random.randint(1, 16) + enemy._defe)
+            xprint('浮华发动了必杀技')
+            enemy.defence(self, random.randint(10, 30) + enemy._defe)
         else:
-            xprint('德莉傻发动了普通攻击')
+            xprint('浮华发动了普通攻击')
             enemy.defence(self, self._atk)
     
     def defence(self, enemy, atk):
